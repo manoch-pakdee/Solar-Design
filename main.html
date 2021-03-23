@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LOAD</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="./value.js">
+         -->
+         <script src="./cal.js"  defer></script>
+         <link rel="stylesheet"  href="../style.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    </head>
+         
+    </head>
+    <body>
+       
+    
+    
+        <center>
+            <div class="div"> 
+                <h2>ซอฟต์แวร์ออกแบบระบบผลิตไฟฟ้าด้วยพลังแสงอาทิตย์</h2> 
+                   <h3>Software Design Electrical Systems Produced By Solar</h3>
+                 
+             </div>
+             <a class ="load" href="./index.html" >หน้าแรก</a>
+             <a class ="load" href="./main.html" >พฤติกรรมการใช้ไฟฟ้า</a>
+             <a class ="load" href="./area.html" >พื่นที่</a> 
+             <a  class="sss" href="./energy.html" >การประเมินพลังงานไฟฟ้า</a>
+             <a  class="sss" href="./pay-back-.period.html" >ระยะเวลาในการคืนทุน</a>
+   
+        <h4 class="load3"> การคำนวณโหลด</h4>
+        <table> 
+            <th>โหลด</th>      <th>กำลังไฟฟ้า(W)</th>       <th>จำนวน</th>    <th>จำนวนชั่วโมงใช้งาน(8.00-18.00น.)   </th> 
+                <tr>
+                    <td>
+                        1.เครื่องปรับอากาศ
+                    </td>
+                    <td>
+                        <input type="text" id="num1"/>
+                    </td>
+                        <td>
+                            <form action="">
+                                <select name="Number" id="aircon">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                        
+                                </select>
+                            </form>          
+                            
+                            <!-- <input type="text" id="sum" readonly="readonly"/> -->
+                            <!-- <input type="button" value="display" onclick="calc()"/> -->
+                            <!-- <script>
+                                function calc()
+                                {
+                                    let num1 = Number(document.querySelector("#aircon").value);
+                                    document.getElementById("sum").value = num1;
+                                }
+                                
+                            </script> -->
+                        </td>                  
+                    <td>
+                        <form action="">
+                            <select name="Number" id="airhr">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>    
+                                    
+                </td>
+              <!--  <td>
+                    <input type="text" id="airsum" readonly="readonly"/>
+                    <input type="button" value="display" onclick="calc()"/></td>-->
+                </tr> 
+                
+                <tr>
+                    <td>
+                        2.หลอดไฟ
+                    </td>
+                    <td>
+                        <input type="text" id="num2"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="light">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="lighthr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+         <!--   <td>
+                <input type="text" id="lightsum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/></td> -->
+            </tr>
+                </tr>
+                <tr>
+                    <td>
+                        3.ตู้เย็น
+                    </td>
+                    <td>
+                        <input type="text" id="num3"/>
+                    </td>
+                    <td>
+                        <form action="" >
+                            <select name="Number" id="lef"> 
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="lefhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+         <!--   <td>
+                <input type="text" id="lefsum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+            </tr>
+                </tr>
+                <tr>
+                    <td>
+                        4.ไมโครเวฟ
+                    </td>
+                    <td>
+                        <input type="text" id="num4"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="microwave">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="microwavehr"> 
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+         <!--   <td>
+                <input type="text" id="microwavesum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        5.กาต้มน้ำร้อน
+                    </td>
+                    <td>
+                        <input type="text" id="num5"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="kettle">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+               
+                <td>
+                    <form action="">
+                        <select name="Number" id=kettlehr>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="kettlesum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td>  -->
+                </tr>
+                <tr>
+                    <td>
+                        6.เตารีด
+                    </td>
+                    <td>
+                        <input type="text" id="num6"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="iron">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="ironhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="ironsum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        7.โทรทัศน์
+                    </td>
+                    <td>
+                        <input type="text" id="num7"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="tele">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="telehr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="telesum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td>  -->
+                </tr>
+                <tr>
+                    <td>
+                        8.เครื่องรับสัญญาณ
+                    </td>
+                    <td>
+                        <input type="text" id="num8"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="receiver">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="receiverhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="receiversum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        9.เครื่องเล่นดีวีดี
+                    </td>
+                    <td>
+                        <input type="text" id="num9"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="dvd">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="dvdhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="dvdsum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        10.ไดร์เป่าผม
+                    </td>
+                    
+                    <td>
+                        <input type="text" id="num10"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="dai"> 
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="daihr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="daisum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        11.พัดลม
+                    </td>
+                    
+                    <td>
+                        <input type="text" id="num11"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="fan"> 
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="fanhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="daisum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        12.คอมพิวเตอร์
+                    </td>
+                    <td>
+                        <input type="text" id="num12"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="computer">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="computerhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="computersum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        13.เครื่องทำน้ำอุ่น
+                    </td>
+                    <td>
+                        <input type="text" id="num13"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="heater"> 
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="heaterhr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="heatersum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        14.เครื่องซักผ้า
+                    </td>
+                    <td>
+                        <input type="text" id="num14"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="washing">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="washinghr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+        <!--    <td>
+                <input type="text" id="washingsum" readonly="readonly"/>
+                <input type="button" value="display" onclick="calc()"/>
+            </td> -->
+                </tr>
+                <tr>
+                    <td>
+                        15.หม้อหุงข้าวไฟฟ้า
+                    </td>
+                    <td>
+                        <input type="text" id="num15"/>
+                    </td>
+                    <td>
+                        <form action="">
+                            <select name="Number" id="rice" >
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                    
+                            </select>
+                        </form>                
+                </td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="ricehr">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                
+                        </select>
+                    </form>                
+            </td>
+            
+            <td>
+
+            </td>
+            <tfoot>
+            <tr>
+            <td>
+                    <input type="button" value="เพิ่มโหลด" id="newrows">
+            </td>
+            </tr>
+            </tfoot>
+            </tr>
+            
+                </tr>
+                <tr>
+                    <td>ติดตั้งระบบ Solar PV Rooftop ขนาด		
+                    </td>
+            <td>
+                <input type="text" id="sum" readonly="readonly"/>kwp
+                <input type="button" value="คำนวณ" onclick="calc()"/>
+                <button type="button" name="ยืนยัน" onclick="saveMy()">ยืนยัน</button> 
+                
+            </td>
+            <td>	<a class="img" href="./img.html" target="blank" >หมายเหตุ</a>
+            </td>  
+                </tr>
+                
+            </th>
+
+    </center> </table>
+
+ 
+       
+        <!-- <script src="" async defer></script> -->
+    </body>
+    
+</html>

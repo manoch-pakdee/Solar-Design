@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> AC ANERGY</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="./energy.js" defer></script>
+   
+    <link rel="stylesheet" href="../energystyle.css">
+    
+    <link rel="stylesheet" href="../energystyle.css">
+    <style>
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: auto;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <center>
+
+        <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+        <div class="div">
+            <h2>ซอฟต์แวร์ออกแบบระบบผลิตไฟฟ้าด้วยพลังแสงอาทิตย์</h2>
+            <h3>Software Design Electrical Systems Produced By Solar</h3>
+
+        </div>
+        <a class="load" href="./index.html">หน้าแรก</a>
+        <a class="load" href="./main.html">พฤติกรรมการใช้ไฟฟ้า</a>
+        <a class="load" href="./area.html">พื้นที่</a>
+        <a class="sss" href="./energy.html">การประเมินพลังงานไฟฟ้า</a>
+        <a class="sss" href="./pay-back-.period.html">ระยะเวลาในการคืนทุน</a>
+
+        <h3 class="ENG">การประเมินพลังงานไฟฟ้า</h3>
+
+        <!--<table width="70%" align="center" cellspacing="0" cellpadding="2" bgcolor="yellow"><tbody><tr><td align="center"><b>การประเมินพลังงานไฟฟ้าที่ผลิตได้จากระบบเซลล์แสงอาทิตย์ (เบื้องต้น)</b></td></tr></tbody></table>
+            -->้ <h5>สถานที่</h5>
+        <table>
+            <th style="padding: 10px;">
+                <div> จังหวัด
+                    <select id="province">
+                        <option>- กรุณาเลือกจังหวัด -</option>
+                    </select>
+                </div>
+            </th>
+            <table><br>
+                <th style="padding: 10px;">
+                    <div> อำเภอ
+                        <select id="amphur">
+                            <option>- กรุณาเลือกอำเภอ -</option>
+                        </select>
+                        &nbsp;&nbsp;PR&nbsp;&nbsp;
+                        <input type="text" id="postcode" />
+                    </div>
+                </th>
+            </table>
+            <!-- <div>
+                <select id="district">
+                    <option>- กรุณาเลือกตำบล -</option>
+                </select>
+            </div> -->
+            <table>
+                <br>
+                <td style="padding: 10px;"> มุมเอียง</td>
+                <td>
+                    <form action="">
+                        <select name="Number" id="tit">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+
+                        </select>
+                    </form>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;ทิศ&nbsp;</td>
+                <td style="padding: 10px;">
+                    <form action="">
+                        <select name="Number" id="azimuth">
+                            <option value="-180">-180</option>
+                            <option value="-135">-135</option>
+                            <option value="-90">-90</option>
+                            <option value="-45">-45</option>
+                            <option value="0">0</option>
+                            <option value="45">45</option>
+                            <option value="90">90</option>
+                            <option value="135">135</option>
+                            <option value="180">180</option>
+
+
+
+                        </select>
+                        &nbsp;
+                        <img id="myImg" src="./i.png" alt="" style="width: 2em;">
+                        <!-- </form></td> <td>	<a class=" img" href="./azimuth.html" target="blank">!</a>
+                </td> -->
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+
+                        <script>
+                            // Get the modal
+
+                            var modal = document.getElementById("myModal");
+                            // Get the image and insert it inside the modal - use its "alt" text as a caption
+                            var img = document.getElementById("myImg");
+                            var modalImg = document.getElementById("img01");
+                            var captionText = document.getElementById("caption");
+                            img.onclick = function () {
+                                modal.style.display = "block";
+                                modalImg.src = 'https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/160187874_3753076398122321_889372748647301400_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeHtUfpaJF8AHlECSF5MBLfHwxtwm1bFuPHDG3CbVsW48cZx8YiP_yjHQ-0ApvebZNO5UehB-75eXpxYxPt0s-Rw&_nc_ohc=UjCm-y52cyYAX_4JSKQ&_nc_ht=scontent.fbkk14-1.fna&oh=8af830d6b5a1cbc194061d7f5dffc8eb&oe=6075D074';
+                                captionText.innerHTML = this.alt;
+                            }
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function () {
+                                modal.style.display = "none";
+                            }
+                        </script>
+
+            </table>
+
+            <table>
+                <center>
+                    <script>
+                        
+                    </script>
+
+                    <tr>
+                        <br>
+                        <td style="padding: 10px;">
+                            ขนาดกำลังติดตั้ง
+                        </td>
+                        <td style="padding: 10px;">
+                            <input type="text" id="num1" readonly="readonly"/> kpw
+                            <!-- <button id="bt2" onclick="showTotal();">Show</button> -->
+                            <script>
+                                  document.getElementById('num1').value = localStorage.getItem("area");
+                            </script>
+                            <div id="testcal_Energy">
+                                <script>
+                                 
+                                </script>
+                            </div>
+                        </td>
+                    </tr>
+                </center>
+            </table>
+
+            <br>
+            <input class="button" type="button" value="ยืนยันการคำนวณ" onclick="ma()" />
+            
+            <div id="showdata"></div>
+            <table id="tabledata">
+                <thead>
+                    <tr>
+                        <h4> Irradiation (kWh/m2/day)</h4>
+                        <th>January
+                        </th>
+                        <th> February
+                        </th>
+                        <th> March
+                        </th>
+                        <th> April
+                        </th>
+                        <th> May
+                        </th>
+                        <th> June
+                        </th>
+                        <th> July
+                        </th>
+                        <th> August
+                        </th>
+                        <th> September
+                        </th>
+                        <th> October
+                        </th>
+                        <th> November
+                        </th>
+                        <th> December
+                        </th>
+                        <th> Average
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody id="table-data"></tbody>
+            </table>
+            <table id="tabledata1">
+                <thead>
+                    <tr>
+                        <h4> Incident in coll.plane(kwh/m2/month)</h4>
+                        <th> January
+                        </th>
+                        <th> February
+                        </th>
+                        <th> March
+                        </th>
+                        <th> April
+                        </th>
+                        <th> May
+                        </th>
+                        <th> June
+                        </th>
+                        <th> July
+                        </th>
+                        <th> August
+                        </th>
+                        <th> September
+                        </th>
+                        <th> October
+                        </th>
+                        <th> November
+                        </th>
+                        <th> December
+                        </th>
+                        <th> Total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="table-data1"></tbody>
+            </table>
+            <table id="tabledata2">
+                <thead>
+                    <tr>
+                        <h4> Energy (kWh)</h4>
+                        <th> January
+                        </th>
+                        <th> February
+                        </th>
+                        <th> March
+                        </th>
+                        <th> April
+                        </th>
+                        <th> May
+                        </th>
+                        <th> June
+                        </th>
+                        <th> July
+                        </th>
+                        <th> August
+                        </th>
+                        <th> September
+                        </th>
+                        <th> October
+                        </th>
+                        <th> November
+                        </th>
+                        <th> December
+                        </th>
+                        <th> Total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="table-data2"></tbody>
+            </table>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script type="text/javascript" src="AutoProvince.js"></script> 
+            <script>
+                $('body').AutoProvince({
+                    PROVINCE: '#province', // select div สำหรับรายชื่อจังหวัด
+                    AMPHUR: '#amphur', // select div สำหรับรายชื่ออำเภอ
+                    DISTRICT: '#district', // select div สำหรับรายชื่อตำบล
+                    POSTCODE: '#postcode', // input field สำหรับรายชื่อรหัสไปรษณีย์
+                    arrangeByName: false // กำหนดให้เรียงตามตัวอักษร
+                });
+            </script>
+           
+            <div class="container">
+                <canvas id="myChart"></canvas>
+            </div>
+
+
+</body>
+
+</html>

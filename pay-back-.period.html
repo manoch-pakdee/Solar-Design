@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PAY-BACK-PERIOD</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../paystyle.css">
+        <script src="./energy.js" defer></script>
+        <script src="./function.js" defer></script>
+        
+    </head>
+    <body>
+        <center>
+            <div class="div">
+                <h2>ซอฟต์แวร์ออกแบบระบบผลิตไฟฟ้าด้วยพลังแสงอาทิตย์</h2> 
+                   <h3>Software Design Electrical Systems Produced By Solar</h3>
+                 
+             </div>
+             <a class ="load" href="./index.html" >หน้าแรก</a>
+             <a class ="load" href="./main.html" >พฤติกรรมการใช้ไฟฟ้า</a>
+             <a class ="load" href="./area.html" >พื้นที่</a> 
+             <a  class="sss" href="./energy.html" >การประเมินพลังงานไฟฟ้า</a>
+             <a  class="sss" href="./pay-back-.period.html" >ระยะเวลาในการคืนทุน</a>
+   
+            
+            <h3 class="pay">ระยะเวลาในการคืนทุน</h3>
+            <table> 
+                <center>  
+                    
+                    <tr>
+                        <td>
+                            ติดตั้งระบบ Solar PV Rooftop ขนาด
+                        </td>
+                        <td>
+                            <input type="text" id="num1"/>kpw
+                            <script>
+                                document.getElementById('num1').value = localStorage.getItem("area");
+                            </script>
+                        </td>
+                        
+                    </tr>
+    
+                    <tr>
+                        <td>
+                            พลังงานที่ผลิตได้ต่อปี (kWh/Year)
+                        </td>
+                        <td>
+                            <input type="text" id="num2"/>หน่วย
+                            <script>
+                            document.getElementById('num2').value = localStorage.getItem("energyofyear");
+                            </script>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            ค่าไฟที่ขายได้ (฿/kWh)
+                        </td>
+                        <td>
+                            <input type="text" id="num3"/>บาท/หน่วย
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            เงินลงทุนทั้งหมด
+                         </td>
+                         <td>
+                             <input type="text" id="sum1" readonly="readonly" />บาท
+                              
+                         </td>
+                    </tr>
+                    <tr>
+                         <td>
+                       Pay Back Period
+                    </td>
+                    <td>
+                        
+                             <input type="text" id="sum2" readonly="readonly" />    ปี
+                             <input type="button" value="คำนวณ" onclick="calc()" />
+                         
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                              <script>
+                                     function calc()
+                                     {
+                              let num1 = Number(document.querySelector("#num1").value);
+                              let num2 = Number(document.querySelector("#num2").value);
+                              let num3 = Number(document.querySelector("#num3").value);
+                              let total = [(num1*70*1000).toFixed(2)];
+                              document.getElementById("sum1").value = total;
+                              let total1 = [(total/(num3*num2)).toFixed(2)];
+                              document.getElementById("sum2").value = total1;          
+                              
+                              // var intairconn = parseInt(num3);
+                              console.log("value of microwave is " + total[0]+" and "+total[1]);
+                                     } 
+                                       
+                                 </script> 
+                         </td>
+                    </tr> 
+        
+                  
+                   
+                        
+                      
+        </center> </table>
+         
+          
+      
+    </body>
+</html>

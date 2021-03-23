@@ -1,0 +1,66 @@
+body{
+    background: rgb(246, 246, 250);
+    
+}
+.div{
+    color: rgb(230, 223, 223);
+    background:  rgb(167, 4, 4);
+    padding: 15px;
+}
+
+a{
+    color: springgreen;
+    background-color: rgb(33, 7, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 18%;
+}
+tbody{
+    width: 200px;
+    background-color: rgb(252, 251, 249);
+    border: 4px solid rgb(12, 3, 116);
+    padding: 20px 200px;
+}
+ table {
+    
+    height: 200px;
+    
+    
+    background: rgb(6, 6, 94);
+  
+   
+}
+
+
+.load3{
+ color: rgb(236, 233, 236);
+ width: 57.5%;
+    padding: 2%;
+    background:  rgb(13, 2, 107);
+
+}
+img {
+    width: 800px;
+    height: 400px;
+}
+td{
+    color: rgb(10, 0, 5); ;
+    border: 2px solid rgb(20, 3, 168);
+
+   background: rgb(245, 247, 246);
+
+}
+th{
+    border: 2px solid rgb(21, 4, 112);
+    background: rgb(173, 177, 176);
+    
+}
+.img{
+    color:rgb(19, 2, 2);
+    
+   padding: 2%;
+    background:rgb(233, 232, 238);
+    
+}

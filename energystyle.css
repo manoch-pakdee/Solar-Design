@@ -1,0 +1,77 @@
+table{
+    border: 3px solid rgb(10, 10, 10);
+    padding: 15px; 
+    
+    text-align: center;
+    background: rgb(243, 243, 247);
+}
+body{
+    background: rgb(246, 246, 250);
+}
+
+.div{
+    color: rgb(230, 223, 223);
+    background:  rgb(167, 4, 4);
+    padding: 15px;
+}
+
+a{
+    color: springgreen;
+    background-color: rgb(33, 7, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 18%;
+}
+body{
+    background-color: rgb(218, 218, 224);
+}
+thead th {
+    border: 8px solid rgb(29, 2, 105);
+
+    background: rgb(247, 242, 244);
+
+}
+thead tr th {
+    border: 8px solid rgb(29, 2, 105);
+    padding: 15px; 
+    background: rgb(247, 242, 244);
+    text-align: center;
+
+}
+thead tr + th{
+    width: 5px;
+    border: 8px solid rgb(29, 2, 105);
+    padding: 15px; 
+    background: rgb(247, 242, 244);
+
+}
+.tabledata{
+    border: 8px solid rgb(99, 119, 96);
+}
+h4{
+    width: 85%;
+    color: rgb(248, 250, 244);
+    background: rgb(13, 2, 107);
+    padding: 15px;
+}
+h5{
+    width: 46%;
+    color: rgb(248, 250, 244);
+    background: rgb(13, 2, 107);
+    padding: 15px;
+}
+.ENG{
+    color: rgb(240, 250, 245);
+    background-color: rgb(132, 129, 145);
+    padding: 10px
+ 
+}  
+.img{
+    color:rgb(19, 2, 2);
+    
+   
+    background:rgb(233, 232, 238);
+    
+}  
