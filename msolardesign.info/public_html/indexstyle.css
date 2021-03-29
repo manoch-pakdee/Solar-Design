@@ -1,0 +1,44 @@
+
+body{
+   background: rgb(249, 249, 250);
+} 
+
+a{
+    
+    color: rgb(27, 6, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+
+.A1{
+    height: 450px;
+    padding: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 70%;
+ 
+    
+}
+
+
+.load{
+    color: springgreen;
+    background-color: rgb(33, 7, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+    
+ 
+
+}
+
+
+
+
+

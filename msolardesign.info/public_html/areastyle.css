@@ -1,0 +1,36 @@
+
+a{
+    color: rgb(21, 9, 134);
+   
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+ 
+
+}
+body{
+    background-color: rgb(198, 198, 207);
+}
+h4{
+    
+    color: rgb(248, 250, 244);
+    background: rgb(13, 2, 107);
+    padding: 20px;
+}
+table{
+    width: 60%;
+    
+    padding: 20px;
+    background: rgb(247, 242, 244);
+}
+.sss{
+    color: springgreen;
+    background-color: rgb(33, 7, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+    margin: 1%;
+}

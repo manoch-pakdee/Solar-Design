@@ -1,0 +1,71 @@
+body{
+    background: rgb(246, 246, 250);
+    
+}
+a{
+    
+    color: rgb(27, 6, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  
+}
+tbody{
+    width: 200px;
+    background-color: rgb(252, 251, 249);
+    border: 2px solid rgb(246, 245, 250);
+    padding: 20px 200px;
+}
+ table {
+    
+    height: 200px;
+    
+    
+    background: rgb(249, 249, 250);
+    padding: 1%;
+    text-align: center;
+}
+
+
+.load3{
+    color: rgb(236, 233, 236);
+    padding: 2%;
+    background:  rgb(43, 33, 139);
+   
+}
+img {
+    
+    height: 400px;
+}
+td{
+    color: rgb(10, 0, 5); ;
+    border: 1px solid rgb(40, 8, 138);
+    padding: 10px;
+    background: rgb(245, 247, 246);
+    text-align: center;
+}
+th{
+    border: 2px solid rgb(43, 6, 117);
+  padding: 10px;   background: rgb(245, 247, 246);
+   
+    
+    
+}
+.img{
+    color:rgb(19, 2, 2);
+    
+    padding: 1px;
+    text-align: center;
+    margin-right: 20px;
+    
+}
+.sss{
+    color: springgreen;
+    background-color: rgb(33, 7, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+}
