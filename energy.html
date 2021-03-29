@@ -15,10 +15,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="./energy.js" defer></script>
-   
     <link rel="stylesheet" href="../energystyle.css">
     
-    <link rel="stylesheet" href="../energystyle.css">
     <style>
         #myImg {
             border-radius: 5px;
@@ -153,22 +151,22 @@
         <!--[if lt IE 7]>
                 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
-        <div class="div">
-            <h2>ซอฟต์แวร์ออกแบบระบบผลิตไฟฟ้าด้วยพลังแสงอาทิตย์</h2>
-            <h3>Software Design Electrical Systems Produced By Solar</h3>
-
+        <div >
+            <a  href="./index.html"><h1 >ซอฟต์แวร์ออกแบบระบบผลิตไฟฟ้าด้วยพลังแสงอาทิตย์</h1>
+            <h1>Software Desing Electrical Systems Produced By Energy</h1></a>  
         </div>
-        <a class="load" href="./index.html">หน้าแรก</a>
+        <!-- <a class="load" href="./index.html">หน้าแรก</a> 
         <a class="load" href="./main.html">พฤติกรรมการใช้ไฟฟ้า</a>
         <a class="load" href="./area.html">พื้นที่</a>
         <a class="sss" href="./energy.html">การประเมินพลังงานไฟฟ้า</a>
-        <a class="sss" href="./pay-back-.period.html">ระยะเวลาในการคืนทุน</a>
+        <a class="sss" href="./pay-back-.period.html">ระยะเวลาในการคืนทุน</a>-->
 
         <h3 class="ENG">การประเมินพลังงานไฟฟ้า</h3>
 
         <!--<table width="70%" align="center" cellspacing="0" cellpadding="2" bgcolor="yellow"><tbody><tr><td align="center"><b>การประเมินพลังงานไฟฟ้าที่ผลิตได้จากระบบเซลล์แสงอาทิตย์ (เบื้องต้น)</b></td></tr></tbody></table>
-            -->้ <h5>สถานที่</h5>
+            --> <h5 class="location">สถานที่ติดตั้ง</h5>
         <table>
+            
             <th style="padding: 10px;">
                 <div> จังหวัด
                     <select id="province">
@@ -182,8 +180,8 @@
                         <select id="amphur">
                             <option>- กรุณาเลือกอำเภอ -</option>
                         </select>
-                        &nbsp;&nbsp;PR&nbsp;&nbsp;
-                        <input type="text" id="postcode" />
+                        &nbsp;&nbsp;PR(Performance Raio)&nbsp;&nbsp;
+                        <input type="text" id="postcode" />  %
                     </div>
                 </th>
             </table>
@@ -246,7 +244,7 @@
                             var captionText = document.getElementById("caption");
                             img.onclick = function () {
                                 modal.style.display = "block";
-                                modalImg.src = 'https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/160187874_3753076398122321_889372748647301400_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=8bfeb9&_nc_eui2=AeHtUfpaJF8AHlECSF5MBLfHwxtwm1bFuPHDG3CbVsW48cZx8YiP_yjHQ-0ApvebZNO5UehB-75eXpxYxPt0s-Rw&_nc_ohc=UjCm-y52cyYAX_4JSKQ&_nc_ht=scontent.fbkk14-1.fna&oh=8af830d6b5a1cbc194061d7f5dffc8eb&oe=6075D074';
+                                modalImg.src = "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.15752-9/159556928_151253650186632_2157810246338760630_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=ae9488&_nc_eui2=AeEhRw9wvlEVFkIIKh3crUgxT57b-g4G1QBPntv6DgbVAADiB23GfgHYslOhRZgo8O4UNWq3RCfOvPNL1Zwa-1R8&_nc_ohc=8Zo3JVBT2jMAX_3nuRw&_nc_ht=scontent.fbkk10-1.fna&oh=fffb58ddf36ca820acfc2c7d7df84574&oe=60707D38";
                                 captionText.innerHTML = this.alt;
                             }
 
@@ -411,6 +409,7 @@
             <div class="container">
                 <canvas id="myChart"></canvas>
             </div>
+            <a  class="sss" href="./pay-back-.period.html" >ต่อไป</a>
 
 
 </body>

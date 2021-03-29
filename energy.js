@@ -1,15 +1,16 @@
 
-
-async function ma() {
+async function ma(azimuth1) {
   var tit = Number(document.getElementById("tit").value);
   var azimuth = Number(document.querySelector("#azimuth").value);
+console.log(azimuth);
   var num1 = Number(document.querySelector("#num1").value);
   var amphur = Number(document.getElementById("amphur").value);
   var PR = String(document.getElementById("postcode").value);
+  
   console.log(PR);
   console.log(amphur);
   console.log(tit);
-  console.log(azimuth);
+  console.log(azimuth1);
   console.log(num1);
   var tmp = 0;
   tmp += tit + azimuth + amphur;
@@ -40,20 +41,6 @@ async function ma() {
     .catch(function (err) {
       console.log('error:' + err)
     });
-
-  // await fetch('data1.json')
-  //   .then(function (response) {
-  //     return response.json();
-
-  //   })
-  //   .then(function (data) {
-  //     console.log(data);
-  //     saveMe(data, tmp,num1,PR);
-  //   })
-  //   .catch(function (err) {
-  //     console.log('error:' + err)
-  //   });
-
 }
 
 
@@ -129,8 +116,7 @@ function appendData1(data, num, pw, PR) {
             </tr>
             `;
       let myChart = document.getElementById('myChart').getContext('2d');
-      // let energyofyear = document.getElementById("energyofyear");
-      // console.log(energyofyear);
+    
       var energyofyear = (data[i].Total * pw * (PR / 100)).toFixed(1);
       saveMe(energyofyear);
       // Global Options
@@ -161,7 +147,6 @@ function appendData1(data, num, pw, PR) {
               (data[i].November * pw * (PR / 100)).toFixed(1),
               (data[i].December * pw * (PR / 100)).toFixed(1)
             ],
-            //backgroundColor:'green',
             backgroundColor: [
               'rgb(73, 73, 75)',
               'rgb(73, 73, 75)',
@@ -213,9 +198,7 @@ function appendData1(data, num, pw, PR) {
 
       mytable1.innerHTML = template1;
       mytable2.innerHTML = template2;
-      // mainConttainer.innerHTML ="Name"+ data[i].ID + "ID" +data[i].January +data[i].February +data[i].March +data[i].April
-      // +data[i].May  +data[i].June +data[i].July  +data[i].August +data[i].September +data[i].October
-      // +data[i].November +data[i].December  +data[i].Average;
+      
     }
   }
 

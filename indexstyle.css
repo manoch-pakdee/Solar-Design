@@ -1,36 +1,26 @@
-tr{
-    
-    height: 200px;
-    
-    background: rgb(18, 18, 134);
-    
-     
-}
-body{
-   background: rgb(246, 246, 250);
-} 
-b{
-    
-    
-    background: rgb(143, 143, 150);
-    margin: 500px 400px 120px;
-   
-}
-.div{
-    color: rgb(230, 223, 223);
-    background:  rgb(167, 4, 4);
-    padding: 15px;
-}
 
+body{
+   background: rgb(249, 249, 250);
+} 
+
+a{
+    
+    color: rgb(27, 6, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+}
 
 
 .A1{
-    height: 200px;
-    padding: 50px;
+    height: 450px;
+    padding: 40px;
     text-align: center;
     text-decoration: none;
-    width: 30%;
-    
+    width: 70%;
+ 
     
 }
 
@@ -42,29 +32,10 @@ b{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin-bottom: 10px;
-    width: 35%;
+    width: 10%;
+    
  
 
-}
-.A2{
-    height: 200px;
-    padding: 50px;
-    text-align: center;
-    text-decoration: none;
-    width: 30%;
-    
-}   
-.sss{
-    color: springgreen;
-    background-color: rgb(33, 7, 148);
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 10px;
-    width: 35%;
- 
 }
 
 

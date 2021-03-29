@@ -16,13 +16,13 @@ body{
 }
 
 a{
-    color: springgreen;
-    background-color: rgb(33, 7, 148);
+   
+    color: rgb(27, 6, 148);
     padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    width: 18%;
+    
 }
 body{
     background-color: rgb(218, 218, 224);
@@ -48,7 +48,7 @@ thead tr + th{
 
 }
 .tabledata{
-    border: 8px solid rgb(99, 119, 96);
+    border: 8px solid rgb(46, 192, 24);
 }
 h4{
     width: 85%;
@@ -57,15 +57,24 @@ h4{
     padding: 15px;
 }
 h5{
-    width: 46%;
+    color: rgb(248, 250, 244);
+    background: rgb(36, 4, 112);
+
+    padding: 15px;
+    width: 50%;
+}
+
+h3{
+    
     color: rgb(248, 250, 244);
     background: rgb(13, 2, 107);
     padding: 15px;
 }
+
 .ENG{
     color: rgb(240, 250, 245);
-    background-color: rgb(132, 129, 145);
-    padding: 10px
+    background-color: rgb(43, 9, 194);
+    padding: 15px
  
 }  
 .img{
@@ -75,3 +84,14 @@ h5{
     background:rgb(233, 232, 238);
     
 }  
+.sss{
+    color: springgreen;
+    background-color: rgb(33, 7, 148);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+    margin: 1%;
+}
+
